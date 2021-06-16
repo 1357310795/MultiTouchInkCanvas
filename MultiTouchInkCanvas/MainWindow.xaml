@@ -1,0 +1,18 @@
+﻿<Window x:Class="MultiTouchInkCanvas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:multiTouchInkCanvas="clr-namespace:MultiTouchInkCanvas"
+        Title="MainWindow" Height="350" Width="525"
+        WindowState="Maximized">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <Button Content="Draw" Click="OnCanvasDrawMode" Padding="10" Margin="10,0,10,0" />
+            <Button Content="Erase" Click="OnCanvasEraseMode" Padding="10" />
+        </StackPanel>
+        <multiTouchInkCanvas:InkCanvasWrapper x:Name="InkWrapper" Grid.Row="1" />
+    </Grid>
+</Window>
